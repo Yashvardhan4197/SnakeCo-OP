@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class SnakeLobbyController : MonoBehaviour
+    
 {
     private Animator animator;
     private new RectTransform transform;

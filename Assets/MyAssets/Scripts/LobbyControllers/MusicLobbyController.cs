@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,12 +29,13 @@ public class MusicLobbyController : MonoBehaviour
         {
             SoundManager.Instance.Playbg(SoundManager.Sound.null1);
             MusicMute.image.color= selected;
+            
             muted = true;
         }
         else if(muted==true)
         {
             SoundManager.Instance.Playbg(SoundManager.Sound.bgMusic);
-            MusicMute.image.color= notselected;
+            MusicMute.image.color= selected;
             muted = false;
         }
 
