@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChooseLevelController : MonoBehaviour
@@ -10,6 +11,7 @@ public class ChooseLevelController : MonoBehaviour
     void Start()
     {
         goBack.onClick.AddListener(GoBack);
+        onePlayer.onClick.AddListener(OnePlayer);
     }
 
     // Update is called once per frame
@@ -21,5 +23,10 @@ public class ChooseLevelController : MonoBehaviour
     {
         gameObject.SetActive(false);
         SoundManager.Instance.PlaySfx(SoundManager.Sound.buttonClick);
+    }
+
+    void OnePlayer()
+    {
+        SceneManager.LoadScene("MainLevel");
     }
 }

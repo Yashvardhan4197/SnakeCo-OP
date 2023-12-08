@@ -35,7 +35,7 @@ public class MusicLobbyController : MonoBehaviour
         else if(muted==true)
         {
             SoundManager.Instance.Playbg(SoundManager.Sound.bgMusic);
-            MusicMute.image.color= selected;
+            MusicMute.image.color= notselected;
             muted = false;
         }
 
