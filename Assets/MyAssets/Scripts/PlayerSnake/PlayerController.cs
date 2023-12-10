@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject Pausetab;
     private bool isPaused = false;
     public int count = 0;
+    public int speed=1;
 
     private void Start()
     {
@@ -33,31 +34,44 @@ public class PlayerController : MonoBehaviour
         //Player1-Input
         if (Input.GetKeyDown(KeyCode.W))
         {
-            _direction = Vector2.up;
-            player1.transform.eulerAngles=new Vector3(0,0,90);
+            if (_direction.y != -speed)
+            {
+                _direction = new Vector2(0, speed);
+                player1.transform.eulerAngles = new Vector3(0, 0, 90);
+            }
         }
         else if(Input.GetKeyDown(KeyCode.S))
         {
-            _direction = Vector2.down;
-            player1.transform.eulerAngles = new Vector3(0, 0,-90);
+            if (_direction.y != +speed)
+            {
+                _direction = new Vector2(0, -speed);
+                player1.transform.eulerAngles = new Vector3(0, 0, -90);
+            }
         }
         else if( Input.GetKeyDown(KeyCode.D))
         {
-            _direction = Vector2.right;
-            player1.transform.eulerAngles = new Vector3(0, 0,0);
+            if (_direction.x != -speed)
+            {
+                _direction = new Vector2(speed, 0);
+                player1.transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
         else if(Input.GetKeyDown(KeyCode.A)) 
-        { 
-            _direction = Vector2.left;
-            player1.transform.eulerAngles = new Vector3(0, -180,0);
+        {
+            if (_direction.x != +speed)
+            {
+                _direction = new Vector2(-speed, 0);
+                player1.transform.eulerAngles = new Vector3(0, -180, 0);
+            }
         }
+        
     }
 
     private void FixedUpdate()
     {
         for (int i = _segments1List.Count - 1; i > 0; i--)
         {
-            _segments1List[i].position = _segments1List[i- 1].position;
+            _segments1List[i].position = _segments1List[i - 1].position;
         }
         player1.transform.position=new Vector3(
             Mathf.Round( player1.transform.position.x)+ _direction.x,
@@ -92,6 +106,9 @@ public class PlayerController : MonoBehaviour
         if (collision.tag=="Food")
         {
             GrowPlayer1();
+            count = Random.Range(1, 3);
+            Debug.Log("hELLO");
         }
     }
+
 }
