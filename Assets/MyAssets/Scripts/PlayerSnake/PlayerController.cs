@@ -99,15 +99,18 @@ public class PlayerController : MonoBehaviour
         segment.position= _segments1List[_segments1List.Count-1].position;
         _segments1List.Add(segment);
     }
-
+    private void ReducePlayer()
+    {
+        _segments1List.RemoveAt(_segments1List.Count-1);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag=="Food")
         {
-            GrowPlayer1();
+            ReducePlayer();
             count = Random.Range(1, 3);
-            Debug.Log("hELLO");
+            Debug.Log("hELLO"+count);
         }
     }
 

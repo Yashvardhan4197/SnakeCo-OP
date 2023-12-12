@@ -4,32 +4,29 @@ using UnityEngine;
 
 public class GridMovement : MonoBehaviour
 {
+    [SerializeField]private GridManager gridManager;
     private void Update()
     {
-        Vector3 screenPos= Camera.main.WorldToScreenPoint(transform.position); 
 
-        float topSideOfScreen=Camera.main.ScreenToWorldPoint(new Vector2(Screen.width,Screen.height)).y;
-        float bottomSideOfScreen = Camera.main.ScreenToWorldPoint(new Vector2(0,0)).y;
+        float height = gridManager.getHeight();
+        float width = gridManager.getWidth();
 
-        float rightSideOfScreen=Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height)).x;
-        float leftSideOfScreen = Camera.main.ScreenToWorldPoint(new Vector2(0,0)).x;
-        if (screenPos.x < 0)
+        if (transform.position.x < -width)
         {
-            Debug.Log(rightSideOfScreen);
-            transform.position = new Vector2(rightSideOfScreen, transform.position.y);
+            transform.position = new Vector2(width-1,transform.position.y);
         }
-        if(screenPos.x > Screen.width)
+        if(transform.position.x > width)
         {
-            transform.position = new Vector2(leftSideOfScreen, transform.position.y);
+            transform.position = new Vector2(-width,transform.position.y);
         }
-        if (screenPos.y < 0)
+
+        if (transform.position.y < -height)
         {
-            transform.position = new Vector2(transform.position.x, topSideOfScreen);
+            transform.position = new Vector2(transform.position.x,height-1);
         }
-        if (screenPos.y > Screen.height)
+        if (transform .position.y > height)
         {
-            transform.position = new Vector2(transform.position.x, bottomSideOfScreen);
+            transform.position = new Vector2(transform.position.x, -height);
         }
-        
     }
 }
