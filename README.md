@@ -24,6 +24,6 @@
 
 ### GAMEPLAY
 
-[[Preview](https://github.com/Yashvardhan4197/SnakeCo-OP/assets/99320683/7e768f53-0553-46d3-a71a-b75b351dd63f)
+(https://github.com/Yashvardhan4197/SnakeCo-OP/assets/99320683/7e768f53-0553-46d3-a71a-b75b351dd63f)
 
 
