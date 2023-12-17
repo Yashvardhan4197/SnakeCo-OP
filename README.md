@@ -23,4 +23,5 @@
  - If both Players collide Head-On, then the player with higher score wins.
 
 ### GAMEPLAY
- Assets/MyAssets/SnakeAss/SnakePreviews/SnakeGame-Preview.mp4
+https://github.com/Yashvardhan4197/SnakeCo-OP/assets/99320683/ad611454-96e2-48a6-a947-edc6a4a6e1f6
+
