@@ -276,7 +276,7 @@ public class PlayerController : MonoBehaviour
         if (pNumber == 1 && shieldStatus==true)
         {
             segment1Prefab.tag = "Untagged";
-            for(int i = 2; i < _segments1List.Count - 1; i++)
+            for(int i = 1; i < _segments1List.Count - 1; i++)
             {
                 _segments1List[i].gameObject.tag = "Untagged";
             }
@@ -284,7 +284,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             segment1Prefab.tag = "PlayerTail";
-            for (int i = 2; i < _segments1List.Count - 1; i++)
+            for (int i = 1; i < _segments1List.Count - 1; i++)
             {
                 _segments1List[i].gameObject.tag = "PlayerTail";
             }
