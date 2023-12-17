@@ -3,7 +3,7 @@
 - Complete Game Loop (Main Menu, Instructions, Pause, Restart, Game Complete).
 
 ### Single-Player : 
-![Single-Player-Snake]()
+![Single-Player-Snake](https://github.com/Yashvardhan4197/SnakeCo-OP/blob/main/Assets/MyAssets/SnakeAss/SnakePreviews/SinglePlayer.png)
 
 ### Two-Player : 
 ![2-Player-Snake]()
