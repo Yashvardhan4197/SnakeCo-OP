@@ -3,10 +3,10 @@
 - Complete Game Loop (Main Menu, Instructions, Pause, Restart, Game Complete).
 
 ### Single-Player : 
-![Single-Player-Snake](https://github.com/brickster241/2D-Snake-Duel/assets/65897987/298372d4-33b8-4529-a29d-fbae32785673)
+![Single-Player-Snake]()
 
 ### Two-Player : 
-![2-Player-Snake](https://github.com/brickster241/2D-Snake-Duel/assets/65897987/dece113b-74bd-4a9b-ae9e-80bae75d2dbf)
+![2-Player-Snake]()
 
 
 
