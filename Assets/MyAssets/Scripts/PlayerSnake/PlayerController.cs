@@ -195,7 +195,7 @@ public class PlayerController : MonoBehaviour
     {
         if (pNumber==1)
         {
-            if (_segments1List.Count > 1)
+            if (_segments1List.Count > 2)
             {
                 int lasttail = _segments1List.Count - 1;
                 Destroy(_segments1List[lasttail].gameObject);
@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(pNumber==2)
         {
-            if (_segments2List.Count > 1)
+            if (_segments2List.Count > 2)
             {
                 int lasttail = _segments2List.Count - 1;
                 Destroy(_segments2List[lasttail].gameObject);
@@ -271,4 +271,40 @@ public class PlayerController : MonoBehaviour
         mainLevelUIController.GameOverbutwhichOne();
     }
 
+    public void ShieldActivated(bool shieldStatus,int pNumber)
+    {
+        if (pNumber == 1 && shieldStatus==true)
+        {
+            segment1Prefab.tag = "Untagged";
+            for(int i = 2; i < _segments1List.Count - 1; i++)
+            {
+                _segments1List[i].gameObject.tag = "Untagged";
+            }
+        }
+        else
+        {
+            segment1Prefab.tag = "PlayerTail";
+            for (int i = 2; i < _segments1List.Count - 1; i++)
+            {
+                _segments1List[i].gameObject.tag = "PlayerTail";
+            }
+        }
+
+        if(pNumber == 2 && shieldStatus == true)
+        {
+            segment2Prefab.tag = "Untagged";
+            for (int i = 2; i < _segments2List.Count - 1; i++)
+            {
+                _segments2List[i].gameObject.tag = "Untagged";
+            }
+        }
+        else
+        {
+            segment2Prefab.tag = "PlayerTail";
+            for (int i = 2; i < _segments2List.Count - 1; i++)
+            {
+                _segments2List[i].gameObject.tag = "PlayerTail";
+            }
+        }
+    }
 }

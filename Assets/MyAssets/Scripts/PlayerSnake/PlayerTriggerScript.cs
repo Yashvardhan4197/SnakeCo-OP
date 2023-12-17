@@ -14,10 +14,11 @@ public class PlayerTriggerScript : MonoBehaviour
             Debug.Log("ShieldActivated");
             shieldactive = true;
             playerController.ShieldUICallfromTrigger(pNumber,shieldactive);
-    
+            playerController.ShieldActivated(shieldactive,pNumber);
             yield return new WaitForSeconds(3f);
             shieldactive = false;
-            playerController.ShieldUICallfromTrigger(pNumber,shieldactive);
+        playerController.ShieldActivated(shieldactive, pNumber);
+        playerController.ShieldUICallfromTrigger(pNumber,shieldactive);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
