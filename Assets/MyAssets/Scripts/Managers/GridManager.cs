@@ -10,8 +10,8 @@ public class GridManager : MonoBehaviour
     private void Awake()
     {
         transform.position = Vector3.zero;
-        height=transform.localScale.y;
-        width=transform.localScale.x;
+        height=transform.localScale.y-1;
+        width=transform.localScale.x+1;
     }
     public float getHeight()
     {

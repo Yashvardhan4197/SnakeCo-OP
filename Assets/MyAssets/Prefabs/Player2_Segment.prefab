@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8823584032697574673}
   - component: {fileID: 8185510963193799477}
   m_Layer: 0
-  m_Name: Player1_Segment
+  m_Name: Player2_Segment
   m_TagString: PlayerTail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d38ae857ae23c4442b8965d17de4f720, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5133cc68ef812f3439633fb2bcc35a13, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.056927204, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

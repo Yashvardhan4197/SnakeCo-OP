@@ -8,10 +8,12 @@ public class ChooseLevelController : MonoBehaviour
     [SerializeField] Button onePlayer;
     [SerializeField] Button twoPlayer;
     [SerializeField] Button goBack;
+    
     void Start()
     {
         goBack.onClick.AddListener(GoBack);
         onePlayer.onClick.AddListener(OnePlayer);
+        twoPlayer.onClick.AddListener(TwoPlayer);
     }
 
     // Update is called once per frame
@@ -27,6 +29,15 @@ public class ChooseLevelController : MonoBehaviour
 
     void OnePlayer()
     {
+        PlayersManager.Instance.NumberOfPlayers(1);
         SceneManager.LoadScene("MainLevel");
+        SoundManager.Instance.PlaySfx(SoundManager.Sound.buttonClick);
+    }
+
+    void TwoPlayer()
+    {
+        PlayersManager.Instance.NumberOfPlayers(2);
+        SceneManager.LoadScene("MainLevel");
+        SoundManager.Instance.PlaySfx(SoundManager.Sound.buttonClick);
     }
 }

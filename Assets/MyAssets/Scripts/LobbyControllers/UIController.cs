@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
         startbutton.onClick.AddListener(StartCanvas);
         musicbutton.onClick.AddListener(MusicCanvas);
         exitbutton.onClick.AddListener(ExitLevel);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
